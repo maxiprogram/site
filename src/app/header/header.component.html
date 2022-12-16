@@ -1,48 +1,25 @@
+<p>header works!</p>
 
-<p>
-  <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <button mat-icon-button>
-          <mat-icon>menu</mat-icon>
-      </button>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+        <mat-icon>menu</mat-icon>
+    </button>
+    <a routerLink="/">
       <span>MaxiProgram</span>
-      <span style="flex: 1 1 auto;"></span>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-          <mat-icon>favorite</mat-icon>
-      </button>
-      <button mat-icon-button>
-        <mat-icon>share</mat-icon>
-      </button>
-    </mat-toolbar-row>
-    <mat-toolbar-row>
-      <span>Second Line</span>
-      <span style="flex: 1 1 auto;"></span>
-      <button mat-icon-button>
-        <mat-icon>verified_user</mat-icon>
-      </button>
-    </mat-toolbar-row>
-  </mat-toolbar>
-</p>
-
-<p>
-  <mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
+    </a>
+    <span style="flex: 1 1 auto;"></span>
+    <button mat-icon-button matTooltip="Выбор темы" [matMenuTriggerFor]="menuTheme">
+      <mat-icon>format_color_fill</mat-icon>
+      <mat-menu #menuTheme>
+        <button mat-menu-item>Тёмная</button>
+        <button mat-menu-item>Светлая</button>
+      </mat-menu>
     </button>
-    <span>MaxiProgram</span>
-    <span style="flex: 1 1 auto;" class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button>
-  </mat-toolbar>
-</p>
+  </mat-toolbar-row>
+</mat-toolbar>
 
-
-  <p>header works!</p>
-  <p>
-    <button mat-raised-button color="primary">Basic Primary</button>
-    <button mat-raised-button>Basic</button>
-  </p>
+<div class="header-title">
+  <h1>MaxiProgram</h1>
+  <h2>Разработка приложений</h2>
+</div>
