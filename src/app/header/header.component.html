@@ -1,12 +1,15 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="mat-elevation-z6">
   <mat-toolbar-row>
     <button mat-icon-button>
         <mat-icon>menu</mat-icon>
     </button>
+
     <a mat-button routerLink="/">
       <span>MaxiProgram</span>
     </a>
-    <span style="flex: 1 1 auto;"></span>
+
+    <span style="flex: 1 1 auto;"></span>    
+
     <button mat-icon-button matTooltip="Выбор темы" [matMenuTriggerFor]="menuTheme">
       <mat-icon>format_color_fill</mat-icon>
       <mat-menu #menuTheme>
@@ -14,6 +17,19 @@
         <button mat-menu-item>Светлая</button>
       </mat-menu>
     </button>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <div>
+      <a mat-button routerLink="/">
+        <span>Обо мне</span>
+      </a>
+      <a mat-button routerLink="/">
+        <span>Услуги</span>
+      </a>
+      <a mat-button routerLink="/">
+        <span>Помощь сайту</span>
+      </a>
+    </div>
   </mat-toolbar-row>
 </mat-toolbar>
 
