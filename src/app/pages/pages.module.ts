@@ -7,12 +7,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { PageRoutingModule } from './page-routing.module';
 import { MainPageComponent } from './main-page/main-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
+import { DonateComponent } from './donate/donate.component';
 
 
 @NgModule({
   declarations: [
     MainPageComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    ContactPageComponent,
+    DonateComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +26,9 @@ import { AboutPageComponent } from './about-page/about-page.component';
   ],
   exports: [
     MainPageComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    ContactPageComponent,
+    DonateComponent
   ]
 })
 export class PagesModule { }
