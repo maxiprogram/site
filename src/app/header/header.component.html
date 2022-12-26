@@ -18,8 +18,18 @@
       </mat-menu>
     </button>
   </mat-toolbar-row>
+
   <mat-toolbar-row>
-    <div class="menu-container">
+
+    <mat-nav-list class="menu-container">
+      <a mat-list-item routerLink="/about">Обо мне</a>
+      <a mat-list-item routerLink="/">Услуги</a>
+      <a mat-list-item routerLink="/">Проекты</a>
+      <a mat-list-item routerLink="/contact">Контакты</a>
+      <a mat-list-item routerLink="/donate">Помощь сайту</a>
+    </mat-nav-list>
+
+    <!-- <div class="menu-container">
       <a mat-button routerLink="/about">
         <span>Обо мне</span>
       </a>
@@ -35,9 +45,25 @@
       <a mat-button routerLink="/donate">
         <span>Помощь сайту</span>
       </a>
-    </div>
+    </div> -->
   </mat-toolbar-row>
 </mat-toolbar>
+
+<!-- <button mat-button (click)="navMenu.toggle()">LEFT MENU</button>
+<mat-sidenav-container style="flex: 1 0 auto;">
+  <mat-sidenav #navMenu>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/about">Обо мне</a>
+      <a mat-list-item routerLink="/">Услуги</a>
+      <a mat-list-item routerLink="/">Проекты</a>
+      <a mat-list-item routerLink="/contact">Контакты</a>
+      <a mat-list-item routerLink="/donate">Помощь сайту</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    CONTENT MAIN
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
 
 
 <div class="header-title">
