@@ -11,5 +11,11 @@ mat-toolbar {
     text-align: center;
     margin-top: 112px; //112px 56px
     padding: 36px;
-    background: #9c27b0;
+    background: #20202a; //#9c27b0;
+}
+
+.menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
