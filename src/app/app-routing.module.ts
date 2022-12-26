@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutPageComponent } from './pages/about-page/about-page.component';
-import { MainPageComponent } from './pages/main-page/main-page.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: MainPageComponent
+    path: 'main',
+    loadChildren: () => import('./pages/pages.module').then((m) => m.PagesModule)
   },
   {
-    path: 'about',
-    component: AboutPageComponent
+    path: '',
+    redirectTo: 'main',
+    pathMatch: 'full'
   }
 ];
 
