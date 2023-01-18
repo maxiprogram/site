@@ -1,6 +1,6 @@
-<mat-toolbar color="primary" class="mat-elevation-z6">
+<mat-toolbar #matToolBar color="primary" class="mat-elevation-z6">
   <mat-toolbar-row>
-    <button mat-icon-button>
+    <button mat-icon-button (click)="onClickLeftMenu()">
         <mat-icon>menu</mat-icon>
     </button>
 
@@ -10,13 +10,35 @@
 
     <span style="flex: 1 1 auto;"></span>    
 
+    <button mat-button matTooltip="Выбор языка" [matMenuTriggerFor]="menuLanguage">
+      Language
+      <mat-icon>language</mat-icon>
+    </button>
+    <mat-menu #menuLanguage>
+      <button mat-menu-item>
+        <mat-icon>radio_button_checked</mat-icon>
+        Русский
+      </button>
+      <button mat-menu-item>
+        <mat-icon>radio_button_unchecked</mat-icon>
+        English
+      </button>
+    </mat-menu>
+
     <button mat-icon-button matTooltip="Выбор темы" [matMenuTriggerFor]="menuTheme">
       <mat-icon>format_color_fill</mat-icon>
-      <mat-menu #menuTheme>
-        <button mat-menu-item>Тёмная</button>
-        <button mat-menu-item>Светлая</button>
-      </mat-menu>
     </button>
+    <mat-menu #menuTheme>
+      <button mat-menu-item>
+        <mat-icon>radio_button_checked</mat-icon>
+        <span>Тёмная</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>radio_button_unchecked</mat-icon>
+        <span>Светлая</span>
+      </button>
+    </mat-menu>
+
   </mat-toolbar-row>
 
   <mat-toolbar-row>
@@ -47,26 +69,10 @@
       </a>
     </div> -->
   </mat-toolbar-row>
+  
 </mat-toolbar>
 
-<!-- <button mat-button (click)="navMenu.toggle()">LEFT MENU</button>
-<mat-sidenav-container style="flex: 1 0 auto;">
-  <mat-sidenav #navMenu>
-    <mat-nav-list>
-      <a mat-list-item routerLink="/about">Обо мне</a>
-      <a mat-list-item routerLink="/">Услуги</a>
-      <a mat-list-item routerLink="/">Проекты</a>
-      <a mat-list-item routerLink="/contact">Контакты</a>
-      <a mat-list-item routerLink="/donate">Помощь сайту</a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    CONTENT MAIN
-  </mat-sidenav-content>
-</mat-sidenav-container> -->
-
-
-<div class="header-title">
+<!-- <div class="header-title">
   <h1>MaxiProgram</h1>
   <h2>Разработка приложений</h2>
-</div>
+</div> -->
