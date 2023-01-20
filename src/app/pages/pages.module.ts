@@ -9,6 +9,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { DonateComponent } from './donate/donate.component';
+import { SuggestionComponent } from './suggestion/suggestion.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { DonateComponent } from './donate/donate.component';
     MainPageComponent,
     AboutPageComponent,
     ContactPageComponent,
-    DonateComponent
+    DonateComponent,
+    SuggestionComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { DonateComponent } from './donate/donate.component';
     MainPageComponent,
     AboutPageComponent,
     ContactPageComponent,
-    DonateComponent
+    DonateComponent,
+    SuggestionComponent
   ]
 })
 export class PagesModule { }

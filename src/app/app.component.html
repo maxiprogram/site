@@ -2,7 +2,7 @@
   <mat-sidenav #navMenu>
     <mat-nav-list>
       <a mat-list-item routerLink="/about">Обо мне</a>
-      <a mat-list-item routerLink="/">Услуги</a>
+      <a mat-list-item routerLink="/suggestion">Услуги</a>
       <a mat-list-item routerLink="/">Проекты</a>
       <a mat-list-item routerLink="/contact">Контакты</a>
       <a mat-list-item routerLink="/donate">Помощь сайту</a>
@@ -13,13 +13,14 @@
 
     <app-header #header [leftMenu]="navMenu"></app-header>
 
-    <div #mainContent>
+    <div #mainContent class="main-content">
       CONTENT
 
       <router-outlet></router-outlet>
 
-      <app-footer></app-footer>
     </div>
+    
+    <app-footer></app-footer>
 
   </mat-sidenav-content>
 </mat-sidenav-container>

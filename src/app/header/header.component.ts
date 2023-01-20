@@ -1,6 +1,6 @@
-import { AfterViewInit, OnInit, Component, Input, ViewChild, ElementRef } from '@angular/core';
+import { AfterViewInit, OnInit, Component, Input, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { MatToolbar, MatToolbarRow } from '@angular/material/toolbar';
+import { MatToolbar } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-header',
