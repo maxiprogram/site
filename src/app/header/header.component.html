@@ -41,15 +41,15 @@
 
   </mat-toolbar-row>
 
-  <mat-toolbar-row>
+  <mat-toolbar-row class="menu-row">
 
     <mat-nav-list class="menu-container">
-      <a mat-list-item routerLink="/about">Обо мне</a>
-      <a mat-list-item routerLink="/suggestion">Услуги</a>
-      <a mat-list-item routerLink="/">Проекты</a>
-      <a mat-list-item routerLink="/contact">Контакты</a>
-      <a mat-list-item routerLink="/donate">Помощь сайту</a>
-    </mat-nav-list>
+        <a mat-list-item routerLink="/about" routerLinkActive="mdc-list-item--activated">Обо мне</a>
+        <a mat-list-item routerLink="/suggestion" routerLinkActive="mdc-list-item--activated">Услуги</a>
+        <a mat-list-item routerLink="/project" routerLinkActive="mdc-list-item--activated">Проекты</a>
+        <a mat-list-item routerLink="/contact" routerLinkActive="mdc-list-item--activated">Контакты</a>
+        <a mat-list-item routerLink="/donate" routerLinkActive="mdc-list-item--activated">Помощь сайту</a>
+      </mat-nav-list>
 
     <!-- <div class="menu-container">
       <a mat-button routerLink="/about">

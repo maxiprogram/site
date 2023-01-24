@@ -21,3 +21,10 @@ mat-toolbar {
     padding: 36px;
     background: #20202a; //#9c27b0;
 }
+
+
+@media (max-width: 780px) {
+    .menu-row {
+        display: none;
+    }
+}

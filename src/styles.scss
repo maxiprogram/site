@@ -19,6 +19,10 @@
 
 // @include mat.all-component-themes($my-theme);
 
+.mdc-list-item--selected .mdc-list-item__primary-text, .mdc-list-item--activated .mdc-list-item__primary-text {
+    color: var(--mdc-theme-primary, #ff0000);
+}
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
