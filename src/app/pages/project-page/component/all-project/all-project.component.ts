@@ -8,7 +8,7 @@ import { OnInit, Component } from '@angular/core';
 export class AllProjectComponent implements OnInit {
   
   ngOnInit(): void {
-    this.getUrl();
+    //this.getUrl();
   }
 
   async getUrl() {
