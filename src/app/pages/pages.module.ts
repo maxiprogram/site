@@ -9,7 +9,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { DonateComponent } from './donate/donate.component';
-import { SuggestionComponent } from './suggestion/suggestion.component';
+import { SuggestionPageComponent } from './suggestion-page/suggestion-page.component';
 
 
 @NgModule({
@@ -18,7 +18,7 @@ import { SuggestionComponent } from './suggestion/suggestion.component';
     AboutPageComponent,
     ContactPageComponent,
     DonateComponent,
-    SuggestionComponent
+    SuggestionPageComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +31,7 @@ import { SuggestionComponent } from './suggestion/suggestion.component';
     AboutPageComponent,
     ContactPageComponent,
     DonateComponent,
-    SuggestionComponent
+    SuggestionPageComponent
   ]
 })
 export class PagesModule { }
