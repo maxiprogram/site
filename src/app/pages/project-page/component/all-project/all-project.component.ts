@@ -12,7 +12,7 @@ export class AllProjectComponent implements OnInit {
   }
 
   async getUrl() {
-    let resp = await fetch('https://maxiprogram.onrender.com/main');
+    let resp = await fetch('https://maxiprogram.onrender.com/3rdpartylicenses.txt');
     console.log(resp);
   }
 }
