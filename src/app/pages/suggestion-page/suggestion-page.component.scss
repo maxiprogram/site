@@ -15,10 +15,17 @@
     margin-left: 6%;
 }
 
-.suggest-web {
+.suggest-game {
     display: flex;
     flex-direction: column;
     margin-left: 6%;
+}
+
+.suggest-web {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 6%;
 }
 
 @media (max-width: 850px) {
@@ -35,7 +42,13 @@
         margin-top: 6%;
     }
 
+    .suggest-game {
+        margin-left: 0;
+        margin-top: 6%;
+    }
+
     .suggest-web {
+        width: 100%;
         margin-left: 0;
         margin-top: 6%;
     }

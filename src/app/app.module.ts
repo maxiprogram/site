@@ -22,7 +22,7 @@ import { PagesModule } from './pages/pages.module';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
