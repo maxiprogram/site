@@ -6,15 +6,21 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 import { ProjectPageRoutingModule } from './project-page-routing.module';
-import { AllProjectComponent } from './component/all-project/all-project.component';
 import { TabProjectComponent } from './tab-project/tab-project.component';
+import { AllProjectComponent } from './component/all-project/all-project.component';
+import { MobileProjectComponent } from './component/mobile-project/mobile-project.component';
+import { GameProjectComponent } from './component/game-project/game-project.component';
+import { SoftwareProjectComponent } from './component/software-project/software-project.component';
 
 
 
 @NgModule({
   declarations: [
     TabProjectComponent,
-    AllProjectComponent
+    AllProjectComponent,
+    MobileProjectComponent,
+    GameProjectComponent,
+    SoftwareProjectComponent
   ],
   imports: [
     CommonModule,

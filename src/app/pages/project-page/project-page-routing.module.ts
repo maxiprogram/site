@@ -8,14 +8,14 @@ const routes: Routes = [
     path: '',
     component: TabProjectComponent
   },
-  {
-    path: 'all',
-    component: AllProjectComponent
-  },
-  {
-    path: 'software',
-    component: TabProjectComponent
-  },
+  // {
+  //   path: 'all',
+  //   component: AllProjectComponent
+  // },
+  // {
+  //   path: 'software',
+  //   component: TabProjectComponent
+  // },
 ];
 
 @NgModule({

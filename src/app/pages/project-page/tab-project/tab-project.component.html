@@ -4,9 +4,21 @@
             <app-all-project></app-all-project>
         </ng-template>
     </mat-tab>
-    <mat-tab label="Приложения">Приложения</mat-tab>
-    <mat-tab label="Мобильные">Мобильные</mat-tab>
-    <mat-tab label="Мелкие игры">Мелкие игры</mat-tab>
+    <mat-tab label="Приложения">
+        <ng-template matTabContent>
+            <app-software-project></app-software-project>
+        </ng-template>
+    </mat-tab>
+    <mat-tab label="Мобильные">
+        <ng-template matTabContent>
+            <app-mobile-project></app-mobile-project>
+        </ng-template>
+    </mat-tab>
+    <mat-tab label="Мелкие игры">
+        <ng-template matTabContent>
+            <app-game-project></app-game-project>
+        </ng-template>
+    </mat-tab>
     <mat-tab label="Прототипы/Демо">Прототипы/Демо</mat-tab>
 </mat-tab-group>
 
