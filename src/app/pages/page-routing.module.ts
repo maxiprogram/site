@@ -28,6 +28,14 @@ const routes: Routes = [
     component: SuggestionPageComponent
   },
   {
+    path: 'project/heineken',
+    loadChildren: () => import('./project-page/post-page/heineken/heineken.module').then((m) => m.HeinekenModule)
+  },
+  {
+    path: 'project/yellowheadrun',
+    loadChildren: () => import('./project-page/post-page/yellowheadrun/yellowheadrun.module').then((m) => m.YellowheadrunModule)
+  },
+  {
     path: 'project',
     loadChildren: () => import('./project-page/project-page.module').then((m) => m.ProjectPagetModule)
   },
