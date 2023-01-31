@@ -15,7 +15,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { PagesModule } from './pages/pages.module';
 
 
 @NgModule({
@@ -36,7 +35,6 @@ import { PagesModule } from './pages/pages.module';
     MatDividerModule,
     MatIconModule,
     MatButtonModule,
-    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

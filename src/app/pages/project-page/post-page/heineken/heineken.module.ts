@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeinekenComponent } from './heineken.component';
 import { RouterModule, Routes } from '@angular/router';
 
+import { HeinekenComponent } from './heineken.component';
 
 const routes: Routes = [
   {
