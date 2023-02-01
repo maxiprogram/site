@@ -21,11 +21,11 @@ export class HeinekenComponent {
   {
     video: 'https://youtu.be/jqlibz3ICOQ',
     //posterImage: 'assets/img/slider/2_min.jpeg',
-    //title: 'Image title'
+    title: 'Image title'
   },
   {
     video: 'https://youtu.be/tYa6OLQHrEc',
-    //posterImage: 'assets/img/slider/2_min.jpeg',
+    posterImage: 'https://img.youtube.com/vi/tYa6OLQHrEc/0.jpg',
     //title: 'Image title'
   }];
 

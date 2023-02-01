@@ -33,6 +33,7 @@ app-tab-project {
     max-width: 100%;
 }
 
-app-heineken {
-    width: 100%;
+//fix bug
+.close-outside {
+    z-index: -1;
 }

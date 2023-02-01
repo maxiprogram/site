@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HeinekenComponent } from './heineken.component';
 import { NgImageSliderModule } from 'ng-image-slider';
 
+
 const routes: Routes = [
   {
     path: '',
