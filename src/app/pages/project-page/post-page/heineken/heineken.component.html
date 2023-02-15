@@ -1,5 +1,30 @@
 <p>heineken works!</p>
 
 <div style="width: 800px;">
-    <ng-image-slider [images]="imageObject"></ng-image-slider>
+    <ng-image-slider
+    [images]="imageObject"
+    [imageSize]="{width: '400px', height: '300px', space: 5}"
+    [lazyLoading]="true"></ng-image-slider>
 </div>
+
+<mat-card class="card-project">
+    <mat-card-header>
+        <!-- <div mat-card-avatar class="avatar">
+            <mat-icon>videogame_asset</mat-icon>
+        </div> -->
+        <mat-card-title>Описание</mat-card-title>
+        <mat-card-subtitle>Описание проекта</mat-card-subtitle>
+    </mat-card-header>
+    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo PinBall"> -->
+    <mat-card-content>
+        <p>Тут описание Тут описание Тут описание Тут описание Тут описание Тут описание Тут описание Тут описание
+            Тут описание Тут описание Тут описание Тут описание Тут описание Тут описание Тут описание Тут описание</p>
+        <p>Тут описание Тут описание Тут описание Тут описание Тут описание Тут описание Тут описание Тут описание
+            bт описание Тут описание Тут описание Тут описание Тут описание Тут описание Тут описание Тут описание</p>
+        <p>Тут описание Тут описание Тут описание Тут описание Тут описание Тут описание Тут описание Тут описание
+            Тут описание Тут описание Тут описание Тут описание Тут описание Тут описание Тут описание Тут описание</p>
+    </mat-card-content>
+    <!-- <mat-card-actions align="end">
+        <button mat-button color="accent">ПОДРОБНЕЕ</button>
+    </mat-card-actions> -->
+</mat-card>

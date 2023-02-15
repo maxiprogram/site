@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HeinekenComponent } from './heineken.component';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { MatCardModule } from '@angular/material/card';
+
+import { HeinekenComponent } from './heineken.component';
 
 
 const routes: Routes = [
@@ -21,7 +23,8 @@ const routes: Routes = [
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    MatCardModule
   ]
 })
 export class HeinekenModule { }

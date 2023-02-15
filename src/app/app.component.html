@@ -1,7 +1,7 @@
 <mat-sidenav-container>
   <mat-sidenav #navMenu fixedInViewport="true" fixedTopGap="0">
     <mat-nav-list>
-      <a mat-list-item routerLink="/main" routerLinkActive="mdc-list-item--activated" #activeRouteMain="routerLinkActive" [attr.cdkFocusInitial]="activeRouteMain.isActive?true:undefined">Главная</a>
+      <a mat-list-item routerLink="/" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="mdc-list-item--activated" #activeRouteMain="routerLinkActive" [attr.cdkFocusInitial]="activeRouteMain.isActive?true:undefined">Главная</a>
       <a mat-list-item routerLink="/about" routerLinkActive="mdc-list-item--activated" #activeRouteAbout="routerLinkActive" [attr.cdkFocusInitial]="activeRouteAbout.isActive?true:undefined">Обо мне</a>
       <a mat-list-item routerLink="/suggestion" routerLinkActive="mdc-list-item--activated" #activeRouteSuggestion="routerLinkActive" [attr.cdkFocusInitial]="activeRouteSuggestion.isActive?true:undefined">Услуги</a>
       <a mat-list-item routerLink="/project" routerLinkActive="mdc-list-item--activated" #activeRouteProject="routerLinkActive" [attr.cdkFocusInitial]="activeRouteProject.isActive?true:undefined">Проекты</a>
