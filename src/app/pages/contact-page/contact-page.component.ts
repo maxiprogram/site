@@ -38,11 +38,11 @@ export class ContactPageComponent {
                 message: `Failed to load the script ＄{scriptElement.src}`
             });
         });
-
+        
         document.head.appendChild(scriptElement);
         //document.body.appendChild(scriptEle);
     } catch (error) {
-        reject(error);
+      reject(error);
     }
     });
   }

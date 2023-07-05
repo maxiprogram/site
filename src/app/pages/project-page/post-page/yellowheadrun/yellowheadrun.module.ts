@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { MatCardModule } from '@angular/material/card';
 
 import { YellowheadrunComponent } from './yellowheadrun.component';
 
@@ -19,7 +21,9 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forChild(routes),
-    CommonModule
+    CommonModule,
+    NgImageSliderModule,
+    MatCardModule
   ]
 })
 export class YellowheadrunModule { }

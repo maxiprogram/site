@@ -1,1 +1,57 @@
-<p>yellowheadrun works!</p>
+<div style="width: 100%;">
+    <p>yellowheadrun works!</p>
+    <h1 style="text-align: center;">YellowHeadRun игра платформер-раннер</h1>
+
+    <div style="width: 100%;">
+        <ng-image-slider
+        [images]="imageObject"
+        [imageSize]="{width: '400px', height: '300px', space: 5}"
+        [lazyLoading]="true"></ng-image-slider>
+    </div>
+
+    <p></p>
+
+    <mat-card>
+        <mat-card-header>
+            <!-- <div mat-card-avatar class="avatar">
+                <mat-icon>videogame_asset</mat-icon>
+            </div> -->
+            <mat-card-title>Описание проекта</mat-card-title>
+            <!-- <mat-card-subtitle>Мелкие игры</mat-card-subtitle> -->
+        </mat-card-header>
+        <mat-card-content>
+            <p>Основная цель при помощи прыжков добраться до конца уровня, избегая препятствия на пути.</p>
+            <p></p>
+            <p>26 уникальных уровня.</p>
+            <p>Игра рассчитана на быструю реакцию и быстрое принятие решения.</p>
+            <p></p>
+            <p><a href="https://play.google.com/store/apps/details?id=net.maxiprogram.yellowheadrun" target="_blank" title="Ссылка на Google Play">Google Play</a></p>
+        </mat-card-content>
+        <!-- <mat-card-actions align="end">
+            <button mat-button color="accent">ПОДРОБНЕЕ</button>
+        </mat-card-actions> -->
+    </mat-card>
+
+    <p></p>
+
+    <mat-card>
+        <mat-card-header>
+            <!-- <div mat-card-avatar class="avatar">
+                <mat-icon>videogame_asset</mat-icon>
+            </div> -->
+            <mat-card-title>Используемые технологии и языки программирования</mat-card-title>
+            <!-- <mat-card-subtitle>Мелкие игры</mat-card-subtitle> -->
+        </mat-card-header>
+        <mat-card-content>
+            <ul>
+                <li>Qt Framework</li>
+                <li>OpenGL 3; Shader model 2</li>
+                <li>C/C++</li>
+            </ul>
+        </mat-card-content>
+        <!-- <mat-card-actions align="end">
+            <button mat-button color="accent">ПОДРОБНЕЕ</button>
+        </mat-card-actions> -->
+    </mat-card>
+
+</div>
