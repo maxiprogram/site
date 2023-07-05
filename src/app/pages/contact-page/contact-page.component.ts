@@ -10,7 +10,10 @@ export class ContactPageComponent {
   public isViewForm: boolean;
 
   constructor() {
-    this.isViewForm = false;
+    this.isViewForm = true;
+  }
+
+  ngOnInit() {
     this.loadScript().then((result) => {
       this.isViewForm = true;
       //console.log(result);
