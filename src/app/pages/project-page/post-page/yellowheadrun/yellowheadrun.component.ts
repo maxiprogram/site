@@ -60,6 +60,11 @@ export class YellowheadrunComponent {
     //alt: 'Photo Yellowheadrun',
     //title: 'Yellowheadrun'
   },
+  {
+    video: 'https://www.youtube.com/watch?v=qLiUmnTOxFI',
+    //posterImage: 'assets/img/slider/2_min.jpeg',
+    //title: 'Image title'
+  },
 ];
 
 }

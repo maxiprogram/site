@@ -36,6 +36,10 @@ const routes: Routes = [
     loadChildren: () => import('./project-page/post-page/merge-camera/merge-camera.module').then((m) => m.MergeCameraModule)
   },
   {
+    path: 'project/pinball',
+    loadChildren: () => import('./project-page/post-page/pin-ball/pin-ball.module').then((m) => m.PinBallModule)
+  },
+  {
     path: 'project/heineken',
     loadChildren: () => import('./project-page/post-page/heineken/heineken.module').then((m) => m.HeinekenModule)
   },

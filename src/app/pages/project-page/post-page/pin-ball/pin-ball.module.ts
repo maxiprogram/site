@@ -2,22 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
-import { NgImageSliderModule } from 'ng-image-slider';
 import { MatCardModule } from '@angular/material/card';
+import { NgImageSliderModule } from 'ng-image-slider';
 
-import { MergeCameraComponent } from './merge-camera.component';
+import { PinBallComponent } from './pin-ball.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: MergeCameraComponent
+    component: PinBallComponent
   },
 ];
 
 @NgModule({
   declarations: [
-    MergeCameraComponent
+    PinBallComponent
   ],
   imports: [
     RouterModule.forChild(routes),
@@ -26,4 +26,4 @@ const routes: Routes = [
     MatCardModule
   ]
 })
-export class MergeCameraModule { }
+export class PinBallModule { }
