@@ -28,6 +28,14 @@ const routes: Routes = [
     component: SuggestionPageComponent
   },
   {
+    path: 'project/cardio',
+    loadChildren: () => import('./project-page/post-page/cardio/cardio.module').then((m) => m.CardioModule)
+  },
+  {
+    path: 'project/mergecamera',
+    loadChildren: () => import('./project-page/post-page/merge-camera/merge-camera.module').then((m) => m.MergeCameraModule)
+  },
+  {
     path: 'project/heineken',
     loadChildren: () => import('./project-page/post-page/heineken/heineken.module').then((m) => m.HeinekenModule)
   },

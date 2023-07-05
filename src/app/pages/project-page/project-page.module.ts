@@ -20,7 +20,7 @@ import { SoftwareProjectComponent } from './component/software-project/software-
     AllProjectComponent,
     MobileProjectComponent,
     GameProjectComponent,
-    SoftwareProjectComponent
+    SoftwareProjectComponent,
   ],
   imports: [
     CommonModule,
