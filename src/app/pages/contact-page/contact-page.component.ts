@@ -7,4 +7,40 @@ import { Component } from '@angular/core';
 })
 export class ContactPageComponent {
 
+  public isViewForm: boolean;
+
+  constructor() {
+    this.isViewForm = false;
+    this.loadScript().then((result) => {
+      this.isViewForm = true;
+      //console.log(result);
+    });
+  }
+
+  loadScript() {
+    return new Promise((resolve, reject) => {
+      try {
+        const scriptElement = document.createElement('script');
+        scriptElement.type = 'text/javascript';
+        scriptElement.async = true;
+        scriptElement.src = 'https://www.google.com/recaptcha/api.js';
+
+        scriptElement.addEventListener('load', (event) => {
+            resolve({ status: true });
+        });
+
+        scriptElement.addEventListener('error', (event) => {
+            reject({
+                status: false,
+                message: `Failed to load the script ＄{scriptElement.src}`
+            });
+        });
+
+        document.head.appendChild(scriptElement);
+        //document.body.appendChild(scriptEle);
+    } catch (error) {
+        reject(error);
+    }
+    });
+  }
 }
