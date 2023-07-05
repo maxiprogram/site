@@ -20,7 +20,7 @@
 // @include mat.all-component-themes($my-theme);
 
 .mdc-list-item--selected .mdc-list-item__primary-text, .mdc-list-item--activated .mdc-list-item__primary-text {
-    color: var(--mdc-theme-primary, #ff0000);
+    color: var(--mdc-theme-primary, #ff0000); //#69f0ae
 }
 
 
