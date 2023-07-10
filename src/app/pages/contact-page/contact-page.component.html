@@ -1,13 +1,30 @@
-<p>contact-page works!</p>
+<div class="contact-page">
+    
+    <p>contact-page works!</p>
 
-<!-- 6Ld-e_omAAAAANps3BB9AShG2nGyt7BvDUh14kaG -->
-<!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+    <mat-form-field class="contact-name">
+        <mat-label>Ваше Имя:</mat-label>
+        <input matInput>
+    </mat-form-field>
 
+    <mat-form-field>
+        <mat-label>Тема:</mat-label>
+        <input matInput>
+    </mat-form-field>
 
-<ng-container *ngIf="isViewForm">
-    <form action="?" method="POST">
-        <div class="g-recaptcha" data-sitekey="6Ld-e_omAAAAANps3BB9AShG2nGyt7BvDUh14kaG"></div>
-        <br/>
-        <input type="submit" value="Submit">
-    </form>
-</ng-container>
+    <mat-form-field>
+        <mat-label>Ваш Email:</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Сообщение:</mat-label>
+        <textarea matInput cols="40" rows="10"></textarea>
+    </mat-form-field>
+
+    <div class="g-recaptcha" data-sitekey="6LeNyREnAAAAADW1wL2uBRgxXojuKjTqi2ywWaSR"></div>    
+</div>
+
+<p></p>
+
+<button mat-raised-button color="accent" (click)="sendMail()">Отправить</button>

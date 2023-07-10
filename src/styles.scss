@@ -20,7 +20,7 @@
 // @include mat.all-component-themes($my-theme);
 
 .mdc-list-item--selected .mdc-list-item__primary-text, .mdc-list-item--activated .mdc-list-item__primary-text {
-    color: var(--mdc-theme-primary, #ff0000); //#69f0ae
+    color: var(--mdc-theme-primary, #ff0000); //#69f0ae #ff0000
 }
 
 
@@ -31,6 +31,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 app-tab-project {
     max-width: 100%;
+}
+
+app-contact-page {
+    width: 100%;
 }
 
 //fix bug

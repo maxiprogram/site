@@ -7,15 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ContactPageComponent {
 
-  public isViewForm: boolean;
-
   constructor() {
-    this.isViewForm = true;
-  }
-
-  ngOnInit() {
     this.loadScript().then((result) => {
-      this.isViewForm = true;
       //console.log(result);
     });
   }
@@ -45,5 +38,15 @@ export class ContactPageComponent {
       reject(error);
     }
     });
+  }
+
+  sendMail() {
+    const response = (<any>window).grecaptcha.getResponse();
+    console.log(response);
+    if(response) {
+      alert('send');
+    } else {
+      alert('NO ');
+    }
   }
 }

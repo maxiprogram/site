@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 import { PageRoutingModule } from './page-routing.module';
 import { MainPageComponent } from './main-page/main-page.component';
@@ -25,6 +27,8 @@ import { SuggestionPageComponent } from './suggestion-page/suggestion-page.compo
     PageRoutingModule,
     MatButtonModule,
     MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   exports: [
     MainPageComponent,
