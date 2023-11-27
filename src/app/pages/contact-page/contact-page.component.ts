@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MailMessage, SendMailService } from '../../services/send-mail.service';
 
 @Component({
   selector: 'app-contact-page',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class ContactPageComponent {
 
-  constructor() {
+  constructor(private sendMailService: SendMailService) {
     this.loadScript().then((result) => {
       //console.log(result);
     });
@@ -45,6 +46,13 @@ export class ContactPageComponent {
     console.log(response);
     if(response) {
       alert('send');
+      let testMessage: MailMessage = {
+        username: 'testName',
+        subject: 'testSubject',
+        from: 'test@gmail.com',
+        textMessage: 'testMESSAGE'
+      };
+      this.sendMailService.sendMail(testMessage);
     } else {
       alert('NO ');
     }
