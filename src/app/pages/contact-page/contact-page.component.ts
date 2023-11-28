@@ -15,7 +15,8 @@ export class ContactPageComponent {
       username: new FormControl('',[Validators.required]),
       subject: new FormControl('',[Validators.required]),
       from: new FormControl('',[Validators.required, Validators.email]),
-      textMessage: new FormControl('',[Validators.required])
+      textMessage: new FormControl('',[Validators.required]),
+      responseToken: new FormControl('',[Validators.required])
     });
 
     this.loadScript().then((result) => {
@@ -23,13 +24,15 @@ export class ContactPageComponent {
     });
   }
 
-  check() {
-    console.log(this.formMailMessage.get('username')?.errors);
-  }
 
   loadScript() {
     return new Promise((resolve, reject) => {
       try {
+        const scriptElementCallBack = document.createElement('script');
+        scriptElementCallBack.type = 'text/javascript';
+        scriptElementCallBack.innerHTML = 'function callBackRecaptcha(data) {alert("callBackRecaptcha"); console.log("callBackRecaptcha", data); document.getElementById("id-response-token").value = data;}';
+        document.head.appendChild(scriptElementCallBack);
+
         const scriptElement = document.createElement('script');
         scriptElement.type = 'text/javascript';
         scriptElement.async = true;
@@ -60,7 +63,7 @@ export class ContactPageComponent {
     if(response) {
       console.log('this.formMailMessage.value', this.formMailMessage.value);
       alert('send');
-      this.sendMailService.sendMail(this.formMailMessage.value);
+      //this.sendMailService.sendMail(this.formMailMessage.value);
     } else {
       alert('Not recaptcha!');
     }

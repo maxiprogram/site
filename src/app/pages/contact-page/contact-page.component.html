@@ -29,7 +29,15 @@
             <mat-error *ngIf="formMailMessage.get('textMessage')?.status === 'INVALID'">Не должно быть пустым!</mat-error>
         </mat-form-field>
 
-        <div class="g-recaptcha" data-sitekey="6LeNyREnAAAAADW1wL2uBRgxXojuKjTqi2ywWaSR"></div>    
+        
+        <input id="id-response-token" type="hidden" formControlName="responseToken">
+
+        <p>{{formMailMessage.status}}</p>
+        <p>{{formMailMessage.get('responseToken')?.status}}</p>
+        <p>{{formMailMessage.get('responseToken')?.value}}</p>
+
+
+        <div class="g-recaptcha" data-sitekey="6LeNyREnAAAAADW1wL2uBRgxXojuKjTqi2ywWaSR" data-callback="callBackRecaptcha"></div>    
 
     </div>
 
