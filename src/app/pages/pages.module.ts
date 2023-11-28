@@ -12,6 +12,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { DonateComponent } from './donate/donate.component';
 import { SuggestionPageComponent } from './suggestion-page/suggestion-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { SuggestionPageComponent } from './suggestion-page/suggestion-page.compo
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
+    ReactiveFormsModule,
   ],
   exports: [
     MainPageComponent,

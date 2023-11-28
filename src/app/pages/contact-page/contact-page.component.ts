@@ -1,17 +1,30 @@
 import { Component } from '@angular/core';
 import { MailMessage, SendMailService } from '../../services/send-mail.service';
+import { ReactiveFormsModule, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-page',
   templateUrl: './contact-page.component.html',
-  styleUrls: ['./contact-page.component.scss']
+  styleUrls: ['./contact-page.component.scss'],
 })
 export class ContactPageComponent {
+  formMailMessage: FormGroup;
 
   constructor(private sendMailService: SendMailService) {
+    this.formMailMessage = new FormGroup({
+      username: new FormControl('',[Validators.required]),
+      subject: new FormControl('',[Validators.required]),
+      from: new FormControl('',[Validators.required, Validators.email]),
+      textMessage: new FormControl('',[Validators.required])
+    });
+
     this.loadScript().then((result) => {
       //console.log(result);
     });
+  }
+
+  check() {
+    console.log(this.formMailMessage.get('username')?.errors);
   }
 
   loadScript() {
@@ -45,16 +58,11 @@ export class ContactPageComponent {
     const response = (<any>window).grecaptcha.getResponse();
     console.log(response);
     if(response) {
+      console.log('this.formMailMessage.value', this.formMailMessage.value);
       alert('send');
-      let testMessage: MailMessage = {
-        username: 'testName',
-        subject: 'testSubject',
-        from: 'test@gmail.com',
-        textMessage: 'testMESSAGE'
-      };
-      this.sendMailService.sendMail(testMessage);
+      this.sendMailService.sendMail(this.formMailMessage.value);
     } else {
-      alert('NO ');
+      alert('Not recaptcha!');
     }
   }
 }
