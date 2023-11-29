@@ -30,8 +30,13 @@ export class ContactPageComponent {
       try {
         const scriptElementCallBack = document.createElement('script');
         scriptElementCallBack.type = 'text/javascript';
-        scriptElementCallBack.innerHTML = 'function callBackRecaptcha(data) {alert("callBackRecaptcha"); console.log("callBackRecaptcha", data); document.getElementById("id-response-token").value = data;}';
+        scriptElementCallBack.innerHTML = 'function callBackRecaptcha(data) { document.getElementById("id-response-token").value = data; document.getElementById("id-response-token").dispatchEvent(new Event("customchange", {value: data})); }';
         document.head.appendChild(scriptElementCallBack);
+
+        const scriptElementResetCallBack = document.createElement('script');
+        scriptElementResetCallBack.type = 'text/javascript';
+        scriptElementResetCallBack.innerHTML = 'function callBackResetRecaptcha(data) { document.getElementById("id-response-token").value = ""; document.getElementById("id-response-token").dispatchEvent(new Event("customreset", {value: ""})); }';
+        document.head.appendChild(scriptElementResetCallBack);
 
         const scriptElement = document.createElement('script');
         scriptElement.type = 'text/javascript';
@@ -57,15 +62,30 @@ export class ContactPageComponent {
     });
   }
 
+  onSustomChange(event: any) {
+    //console.log('event', event);
+    //console.log('event.event.target.value', event.target.value);
+    this.formMailMessage.get('responseToken')?.setValue(event.target.value);
+  }
+
+  onSustomReset(event: any) {
+    //console.log('event', event);
+    //console.log('event.event.target.value', event.target.value);
+    this.formMailMessage.get('responseToken')?.setValue("");
+  }
+
   sendMail() {
-    const response = (<any>window).grecaptcha.getResponse();
-    console.log(response);
-    if(response) {
-      console.log('this.formMailMessage.value', this.formMailMessage.value);
-      alert('send');
-      //this.sendMailService.sendMail(this.formMailMessage.value);
-    } else {
-      alert('Not recaptcha!');
-    }
+    //console.log('this.formMailMessage.value', this.formMailMessage.value);
+    this.sendMailService.sendMail(this.formMailMessage.value);
+
+    // const response = (<any>window).grecaptcha.getResponse();
+    // console.log(response);
+    // if(response) {
+    //   console.log('this.formMailMessage.value', this.formMailMessage.value);
+    //   alert('send');
+    //   this.sendMailService.sendMail(this.formMailMessage.value);
+    // } else {
+    //   alert('Not recaptcha!');
+    // }
   }
 }
