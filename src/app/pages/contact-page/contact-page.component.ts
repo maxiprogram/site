@@ -9,6 +9,7 @@ import { ReactiveFormsModule, FormControl, FormGroup, Validators } from '@angula
 })
 export class ContactPageComponent {
   formMailMessage: FormGroup;
+  isViewForm: boolean;
 
   constructor(private sendMailService: SendMailService) {
     this.formMailMessage = new FormGroup({
@@ -18,6 +19,8 @@ export class ContactPageComponent {
       textMessage: new FormControl('',[Validators.required]),
       responseToken: new FormControl('',[Validators.required])
     });
+
+    this.isViewForm = true;
 
     this.loadScript().then((result) => {
       //console.log(result);
@@ -77,6 +80,7 @@ export class ContactPageComponent {
   sendMail() {
     //console.log('this.formMailMessage.value', this.formMailMessage.value);
     this.sendMailService.sendMail(this.formMailMessage.value);
+    this.isViewForm = false;
 
     // const response = (<any>window).grecaptcha.getResponse();
     // console.log(response);

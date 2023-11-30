@@ -1,4 +1,4 @@
-<div >
+<div *ngIf="isViewForm">
     
     <p>contact-page works!</p>
     
@@ -40,4 +40,8 @@
 
     <button [disabled]="!formMailMessage.valid" mat-raised-button color="accent" (click)="sendMail()">Отправить</button>
 
+</div>
+
+<div *ngIf="!isViewForm">
+    <h1>OK SEND MAIL THANK YOU</h1>
 </div>
