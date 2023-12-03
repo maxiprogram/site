@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
-import { MailMessage, SendMailService } from '../../services/send-mail.service';
-import { ReactiveFormsModule, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { SendMailService } from '../../services/send-mail.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-page',
   templateUrl: './contact-page.component.html',
   styleUrls: ['./contact-page.component.scss'],
 })
-export class ContactPageComponent {
+export class ContactPageComponent implements AfterViewInit {
+  @ViewChild('idScriptsRecaptcha', {static: false}) idScriptsRecaptcha: ElementRef | undefined;
   formMailMessage: FormGroup;
   isViewForm: boolean;
 
@@ -21,9 +22,11 @@ export class ContactPageComponent {
     });
 
     this.isViewForm = true;
+  }
 
+  ngAfterViewInit() {
     this.loadScript().then((result) => {
-      //console.log(result);
+      //console.log('loadScript()', result);
     });
   }
 
@@ -34,12 +37,16 @@ export class ContactPageComponent {
         const scriptElementCallBack = document.createElement('script');
         scriptElementCallBack.type = 'text/javascript';
         scriptElementCallBack.innerHTML = 'function callBackRecaptcha(data) { document.getElementById("id-response-token").value = data; document.getElementById("id-response-token").dispatchEvent(new Event("customchange", {value: data})); }';
-        document.head.appendChild(scriptElementCallBack);
+        //document.head.appendChild(scriptElementCallBack);
+        //document.getElementById('id-scripts-recaptcha')?.appendChild(scriptElementCallBack);
+        this.idScriptsRecaptcha?.nativeElement.appendChild(scriptElementCallBack);
 
         const scriptElementResetCallBack = document.createElement('script');
         scriptElementResetCallBack.type = 'text/javascript';
         scriptElementResetCallBack.innerHTML = 'function callBackResetRecaptcha(data) { document.getElementById("id-response-token").value = ""; document.getElementById("id-response-token").dispatchEvent(new Event("customreset", {value: ""})); }';
-        document.head.appendChild(scriptElementResetCallBack);
+        //document.head.appendChild(scriptElementResetCallBack);
+        //document.getElementById('id-scripts-recaptcha')?.appendChild(scriptElementResetCallBack);
+        this.idScriptsRecaptcha?.nativeElement.appendChild(scriptElementResetCallBack);
 
         const scriptElement = document.createElement('script');
         scriptElement.type = 'text/javascript';
@@ -57,8 +64,10 @@ export class ContactPageComponent {
             });
         });
         
-        document.head.appendChild(scriptElement);
+        //document.head.appendChild(scriptElement);
         //document.body.appendChild(scriptEle);
+        //document.getElementById('id-scripts-recaptcha')?.appendChild(scriptElement);
+        this.idScriptsRecaptcha?.nativeElement.appendChild(scriptElement);
     } catch (error) {
       reject(error);
     }
