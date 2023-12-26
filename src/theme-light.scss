@@ -1,6 +1,6 @@
-//@use "@angular/material/prebuilt-themes/deeppurple-amber.css";
+@use "@angular/material/prebuilt-themes/deeppurple-amber.css";
 
-@use "@angular/material/prebuilt-themes/indigo-pink.css";
+//@use "@angular/material/prebuilt-themes/indigo-pink.css";
 
 // @use '@angular/material' as mat;
 
@@ -25,5 +25,5 @@
 }
 
 .footer {
-    background: #3f51b5; //#673ab7
+    background: #673ab7; //#3f51b5
 }
