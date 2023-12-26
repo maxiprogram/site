@@ -33,12 +33,12 @@
       <mat-icon>format_color_fill</mat-icon>
     </button>
     <mat-menu #menuTheme>
-      <button mat-menu-item>
-        <mat-icon>radio_button_checked</mat-icon>
+      <button mat-menu-item (click)="changeTheme('dark')">
+        <mat-icon>{{themeName === 'dark' ? 'radio_button_checked' : 'radio_button_unchecked'}}</mat-icon>
         <span>Тёмная</span>
       </button>
-      <button mat-menu-item>
-        <mat-icon>radio_button_unchecked</mat-icon>
+      <button mat-menu-item (click)="changeTheme('light')">
+        <mat-icon>{{themeName === 'light' ? 'radio_button_checked' : 'radio_button_unchecked'}}</mat-icon>
         <span>Светлая</span>
       </button>
     </mat-menu>

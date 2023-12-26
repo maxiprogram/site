@@ -33,7 +33,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "src/theme-dark.scss",
+                "inject": false
+              },
+              {
+                "input": "src/theme-light.scss",
+                "inject": false
+              }
             ],
             "scripts": []
           },
@@ -96,7 +104,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "src/theme-dark.scss",
+                "inject": false
+              },
+              {
+                "input": "src/theme-light.scss",
+                "inject": false
+              }
             ],
             "scripts": []
           }

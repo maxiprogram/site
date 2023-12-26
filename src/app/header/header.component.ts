@@ -12,9 +12,15 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   @ViewChild('matToolBar') matToolBar!: MatToolbar;
 
   public height: number;
+  public themeName: string|null;
 
   constructor() {
     this.height = 0;
+    this.themeName = localStorage.getItem('theme');
+    if(!this.themeName) {
+      localStorage.setItem('theme', 'dark');
+      this.themeName = 'dark';
+    }
   }
 
   ngOnInit(): void {
@@ -30,6 +36,15 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   onClickLeftMenu() {
     this.leftMenu.toggle();
+  }
+
+  changeTheme(themeName: 'dark'|'light') {
+    localStorage.setItem('theme', themeName);
+    this.themeName = themeName;
+    let link = document.getElementById('id-theme');
+    if(link) {
+      link.setAttribute('href', 'theme-' + this.themeName + '.css');
+    }
   }
 
 }
