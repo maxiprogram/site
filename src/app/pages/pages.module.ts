@@ -8,11 +8,11 @@ import { MatInputModule } from '@angular/material/input';
 
 import { PageRoutingModule } from './page-routing.module';
 import { MainPageComponent } from './main-page/main-page.component';
-import { AboutPageComponent } from './about-page/about-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { DonateComponent } from './donate/donate.component';
 import { SuggestionPageComponent } from './suggestion-page/suggestion-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AboutPageComponent } from './about-page/about-page.component';
 
 
 @NgModule({
@@ -34,7 +34,6 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   exports: [
     MainPageComponent,
-    AboutPageComponent,
     ContactPageComponent,
     DonateComponent,
     SuggestionPageComponent

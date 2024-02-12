@@ -2,8 +2,8 @@
   <mat-sidenav #navMenu fixedInViewport="true" fixedTopGap="0">
     <mat-nav-list>
       <a mat-list-item routerLink="/" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="mdc-list-item--activated" #activeRouteMain="routerLinkActive" [attr.cdkFocusInitial]="activeRouteMain.isActive?true:undefined">Главная</a>
-      <a mat-list-item routerLink="/about" routerLinkActive="mdc-list-item--activated" #activeRouteAbout="routerLinkActive" [attr.cdkFocusInitial]="activeRouteAbout.isActive?true:undefined">Обо мне</a>
-      <a mat-list-item routerLink="/suggestion" routerLinkActive="mdc-list-item--activated" #activeRouteSuggestion="routerLinkActive" [attr.cdkFocusInitial]="activeRouteSuggestion.isActive?true:undefined">Услуги</a>
+      <!-- <a mat-list-item routerLink="/about" routerLinkActive="mdc-list-item--activated" #activeRouteAbout="routerLinkActive" [attr.cdkFocusInitial]="activeRouteAbout.isActive?true:undefined">Обо мне</a> -->
+      <a mat-list-item routerLink="/suggestion" routerLinkActive="mdc-list-item--activated" #activeRouteSuggestion="routerLinkActive" [attr.cdkFocusInitial]="activeRouteSuggestion.isActive?true:undefined">Навыки</a>
       <a mat-list-item routerLink="/project" routerLinkActive="mdc-list-item--activated" #activeRouteProject="routerLinkActive" [attr.cdkFocusInitial]="activeRouteProject.isActive?true:undefined">Проекты</a>
       <a mat-list-item routerLink="/contact" routerLinkActive="mdc-list-item--activated" #activeRouteContact="routerLinkActive" [attr.cdkFocusInitial]="activeRouteContact.isActive?true:undefined">Контакты</a>
       <a mat-list-item routerLink="/donate" routerLinkActive="mdc-list-item--activated" #activeRouteDonate="routerLinkActive" [attr.cdkFocusInitial]="activeRouteDonate.isActive?true:undefined">Помощь сайту</a>
@@ -15,10 +15,7 @@
     <app-header #header [leftMenu]="navMenu"></app-header>
 
     <div #mainContent class="main-content">
-      CONTENT
-
       <router-outlet></router-outlet>
-
     </div>
     
     <app-footer></app-footer>

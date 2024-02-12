@@ -6,6 +6,7 @@
     margin: auto;
     padding: 16px;
     flex-wrap: wrap;
+    min-height: calc(100vh - 240px);
 }
 
 mat-sidenav {
