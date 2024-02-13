@@ -1,5 +1,8 @@
 .footer {
-    height: 80px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .footer-links {

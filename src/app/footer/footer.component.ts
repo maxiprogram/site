@@ -8,9 +8,18 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
+  
+  public themeName: string|null;
+
   constructor(private readonly matIconRegistry: MatIconRegistry, private readonly domSanitizer: DomSanitizer) {
     this.matIconRegistry.addSvgIcon('github', this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/icons/github.svg'));
     this.matIconRegistry.addSvgIcon('google', this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/icons/google.svg'));
     this.matIconRegistry.addSvgIcon('telegram', this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/icons/telegram.svg'));
+
+    this.themeName = localStorage.getItem('theme');
+    if(!this.themeName) {
+      localStorage.setItem('theme', 'dark');
+      this.themeName = 'dark';
+    }
   }
 }
