@@ -1,0 +1,56 @@
+<div style="width: 100%;">
+    <h1 style="text-align: center;">NeuroBartender</h1>
+
+    <div style="width: 100%;">
+        <ng-image-slider
+        [images]="imageObject"
+        [imageSize]="{width: '400px', height: '300px', space: 5}"
+        [lazyLoading]="true"></ng-image-slider>
+    </div>
+
+    <p></p>
+
+    <mat-card>
+        <mat-card-header>
+            <!-- <div mat-card-avatar class="avatar">
+                <mat-icon>desktop_windows</mat-icon>
+            </div> -->
+            <mat-card-title>Описание проекта</mat-card-title>
+            <!-- <mat-card-subtitle>Приложения</mat-card-subtitle> -->
+        </mat-card-header>
+        <mat-card-content>
+            <p>NeuroBartender – приложение работающее с устройством NeuroSky MindWave.</p>
+            <p><a href="https://store.neurosky.com/pages/mindwave">https://store.neurosky.com/pages/mindwave</a></p>
+            <p>Скорость налития рюмки зависит от показателей Attention получаемого от устройства - </p>
+            <p>распознающего мозговые волны, определяя эмоциональные состояния с помощью одного датчика на лбу.</p>
+
+        </mat-card-content>
+        <!-- <mat-card-actions align="end">
+            <button mat-button color="accent">ПОДРОБНЕЕ</button>
+        </mat-card-actions> -->
+    </mat-card>
+
+    <p></p>
+
+    <mat-card>
+        <mat-card-header>
+            <!-- <div mat-card-avatar class="avatar">
+                <mat-icon>desktop_windows</mat-icon>
+            </div> -->
+            <mat-card-title>Используемые технологии и языки программирования</mat-card-title>
+            <!-- <mat-card-subtitle>Приложения</mat-card-subtitle> -->
+        </mat-card-header>
+        <mat-card-content>
+            <ul>
+                <li>Html/Css/JavaScript</li>
+                <li>Core WebView Chromium</li>
+                <li>NeuroSky MindWave SDK</li>
+                <li>C#</li>
+            </ul>
+        </mat-card-content>
+        <!-- <mat-card-actions align="end">
+            <button mat-button color="accent">ПОДРОБНЕЕ</button>
+        </mat-card-actions> -->
+    </mat-card>
+
+</div>

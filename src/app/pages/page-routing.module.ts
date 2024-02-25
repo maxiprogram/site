@@ -51,6 +51,10 @@ const routes: Routes = [
     loadChildren: () => import('./project-page/post-page/face-detect/face-detect.module').then((m) => m.FaceDetectModule)
   },
   {
+    path: 'project/neurobartender',
+    loadChildren: () => import('./project-page/post-page/neuro-bartender/neuro-bartender.module').then((m) => m.NeuroBartenderModule)
+  },
+  {
     path: 'project',
     loadChildren: () => import('./project-page/project-page.module').then((m) => m.ProjectPagetModule)
   },
