@@ -1,0 +1,59 @@
+<div style="width: 100%;">
+    <h1 style="text-align: center;">FaceDetect фотобутка</h1>
+
+    <div style="width: 100%;">
+        <ng-image-slider
+        [images]="imageObject"
+        [imageSize]="{width: '400px', height: '300px', space: 5}"
+        [lazyLoading]="true"></ng-image-slider>
+    </div>
+
+    <p></p>
+
+    <mat-card>
+        <mat-card-header>
+            <!-- <div mat-card-avatar class="avatar">
+                <mat-icon>desktop_windows</mat-icon>
+            </div> -->
+            <mat-card-title>Описание проекта</mat-card-title>
+            <!-- <mat-card-subtitle>Приложения</mat-card-subtitle> -->
+        </mat-card-header>
+        <mat-card-content>
+            <p>FaceDetect фотобутка – приложение работающее с видеопотоком камеры, распознает лицо, и эмоции найденого лица.</p>
+            <p>Функциональные возможности:</p>
+            <ul>
+                <li>Распознание лица в реальном времени</li>
+                <li>RealTime preview c камеры(поддержка Web-камер и фотоаппаратов серии Canon)</li>
+                <li>Распознание эмоций по найденному лицу и вывод на экран(например гнев, презрение, отвращение, страх, счастье, нейтральное выражение, грусть и удивление)</li>
+                <li>Печать фото на принтер с предсказанием(предсказание генерируется исходя из базы данных по эмоциональному окрасу лица распознанного человека)</li>
+            </ul>
+
+        </mat-card-content>
+        <!-- <mat-card-actions align="end">
+            <button mat-button color="accent">ПОДРОБНЕЕ</button>
+        </mat-card-actions> -->
+    </mat-card>
+
+    <p></p>
+
+    <mat-card>
+        <mat-card-header>
+            <!-- <div mat-card-avatar class="avatar">
+                <mat-icon>desktop_windows</mat-icon>
+            </div> -->
+            <mat-card-title>Используемые технологии и языки программирования</mat-card-title>
+            <!-- <mat-card-subtitle>Приложения</mat-card-subtitle> -->
+        </mat-card-header>
+        <mat-card-content>
+            <ul>
+                <li>OpenCV</li>
+                <li>Azure Face API</li>
+                <li>C#</li>
+            </ul>
+        </mat-card-content>
+        <!-- <mat-card-actions align="end">
+            <button mat-button color="accent">ПОДРОБНЕЕ</button>
+        </mat-card-actions> -->
+    </mat-card>
+
+</div>

@@ -47,6 +47,10 @@ const routes: Routes = [
     loadChildren: () => import('./project-page/post-page/yellowheadrun/yellowheadrun.module').then((m) => m.YellowheadrunModule)
   },
   {
+    path: 'project/facedetect',
+    loadChildren: () => import('./project-page/post-page/face-detect/face-detect.module').then((m) => m.FaceDetectModule)
+  },
+  {
     path: 'project',
     loadChildren: () => import('./project-page/project-page.module').then((m) => m.ProjectPagetModule)
   },
