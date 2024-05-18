@@ -42,7 +42,7 @@ export class Mtbank30Component {
     //title: 'Image title'
   },
   {
-    video: 'https://youtube.com/shorts/yVpscaRlqFc',
+    video: 'https://youtube.com/watch?v=yVpscaRlqFc',
     //posterImage: 'assets/img/slider/2_min.jpeg',
     //title: 'Image title'
   }

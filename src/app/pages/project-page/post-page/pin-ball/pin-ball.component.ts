@@ -30,11 +30,11 @@ export class PinBallComponent {
       //posterImage: 'assets/img/slider/2_min.jpeg',
       //title: 'Image title'
     },
-    // {
-    //   video: 'https://youtube.com/shorts/oysqrYJ038I?feature=share',
-    //   //posterImage: 'assets/img/slider/2_min.jpeg',
-    //   //title: 'Image title'
-    // },
+    {
+      video: 'https://youtube.com/watch?v=oysqrYJ038I',
+      //posterImage: 'assets/img/slider/2_min.jpeg',
+      //title: 'Image title'
+    },
 ];
 
 }
