@@ -51,6 +51,10 @@ const routes: Routes = [
     loadChildren: () => import('./project-page/post-page/ludo-smile/ludo-smile.module').then((m) => m.LudoSmileModule)
   },
   {
+    path: 'project/mtbank30',
+    loadChildren: () => import('./project-page/post-page/mtbank30/mtbank30.module').then((m) => m.Mtbank30Module)
+  },
+  {
     path: 'project/facedetect',
     loadChildren: () => import('./project-page/post-page/face-detect/face-detect.module').then((m) => m.FaceDetectModule)
   },
