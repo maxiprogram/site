@@ -1,0 +1,68 @@
+<div style="width: 100%;">
+    <h1 style="text-align: center;">AiArt создание изображения</h1>
+
+    <div style="width: 100%;">
+        <ng-image-slider
+        [images]="imageObject"
+        [imageSize]="{width: '400px', height: '300px', space: 5}"
+        [lazyLoading]="true"></ng-image-slider>
+    </div>
+
+    <p></p>
+
+    <mat-card>
+        <mat-card-header>
+            <!-- <div mat-card-avatar class="avatar">
+                <mat-icon>desktop_windows</mat-icon>
+            </div> -->
+            <mat-card-title>Описание проекта</mat-card-title>
+            <!-- <mat-card-subtitle>Приложения</mat-card-subtitle> -->
+        </mat-card-header>
+        <mat-card-content>
+            <p>Кроссплатформенное, клиент-серверное приложение, для создания AI изображения из наброска.</p>
+            <p></p>
+            <ul>Список возвожных стилей, для генерации изображения:
+                <li>3D</li>
+                <li>Аналоговый фильм</li>
+                <li>Aниме</li>
+                <li>Кинематографическии</li>
+                <li>Комикс</li>
+                <li>Digital-арт</li>
+                <li>Фэнтези-арт</li>
+                <li>Изометрический</li>
+                <li>Штрих-арт</li>
+                <li>Низкополигональная</li>
+                <li>Неон-панк</li>
+                <li>Оригами</li>
+                <li>Фотографический</li>
+                <li>Пиксель-арт</li>
+            </ul>
+        </mat-card-content>
+        <!-- <mat-card-actions align="end">
+            <button mat-button color="accent">ПОДРОБНЕЕ</button>
+        </mat-card-actions> -->
+    </mat-card>
+
+    <p></p>
+
+    <mat-card>
+        <mat-card-header>
+            <!-- <div mat-card-avatar class="avatar">
+                <mat-icon>desktop_windows</mat-icon>
+            </div> -->
+            <mat-card-title>Используемые технологии и языки программирования</mat-card-title>
+            <!-- <mat-card-subtitle>Приложения</mat-card-subtitle> -->
+        </mat-card-header>
+        <mat-card-content>
+            <ul>
+                <li>Qt Framework</li>
+                <li>C/C++</li>
+                <li>Сторонний HTTP API-AI</li>
+            </ul>
+        </mat-card-content>
+        <!-- <mat-card-actions align="end">
+            <button mat-button color="accent">ПОДРОБНЕЕ</button>
+        </mat-card-actions> -->
+    </mat-card>
+
+</div>
