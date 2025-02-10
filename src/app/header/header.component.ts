@@ -1,6 +1,7 @@
 import { AfterViewInit, OnInit, Component, Input, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { MatToolbar } from '@angular/material/toolbar';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   public height: number;
   public themeName: string|null;
 
-  constructor() {
+  constructor(public languageService: LanguageService) {
     this.height = 0;
     this.themeName = localStorage.getItem('theme');
     if(!this.themeName) {
@@ -45,6 +46,10 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     if(link) {
       link.setAttribute('href', 'theme-' + this.themeName + '.css');
     }
+  }
+
+  changeLanguage(lang: 'ru'|'en') {
+    this.languageService.setLanguage(lang);
   }
 
 }

@@ -2,50 +2,68 @@
 
     <div class="suggest-software">
         <h1>
-            Прикладные/Cистемные приложения
+            {{languageService.getLanguage() === 'ru' ? 'Прикладные/Cистемные приложения' : 'Application/System applications'}}
         </h1>
         <p>
-            Занимаюсь разработкой программного обеспечения прикладного и системного уровня.
+            {{languageService.getLanguage() === 'ru' ? 'Занимаюсь разработкой программного обеспечения прикладного и системного уровня.' : 'I am engaged in the development of software at the application and system level.'}}
         </p>
-        <p>Стек используемым технологий:</p>
+        <p>
+            {{languageService.getLanguage() === 'ru' ? 'Стек используемым технологий:' : 'Technologies used:'}}
+        </p>
         <ul>
             <li>C/C++; Qt; QML</li>
             <li>C#; Windows Forms</li>
             <li>WinApi; Linux</li>
         </ul>
-        <p style="text-align: right;"><button routerLink="/contact" mat-raised-button color="accent">Оставить заявку</button></p>
+        <p style="text-align: right;">
+            <button routerLink="/contact" mat-raised-button color="accent">
+                {{languageService.getLanguage() === 'ru' ? 'Оставить заявку' : 'Leave a request'}}
+            </button>
+        </p>
     </div>
     
     <div class="suggest-android">
         <h1>
-            Мобильные приложения
+            {{languageService.getLanguage() === 'ru' ? 'Мобильные приложения' : 'Mobile application'}}
         </h1>
         <p>
-            Занимаюсь разработкой мобильных приложений под Android.
+            {{languageService.getLanguage() === 'ru' ? 'Занимаюсь разработкой мобильных приложений под Android.' : 'I am engaged in the development of mobile applications for Android.'}}
         </p>
-        <p>Стек используемым технологий:</p>
+        <p>
+            {{languageService.getLanguage() === 'ru' ? 'Стек используемым технологий:' : 'Technologies used:'}}
+        </p>
         <ul>
             <li>Java; Android SDK</li>
             <li>C/C++; Android NDK; Qt; QML</li>
             <li>Ionic; Angular; Capacitor</li>
         </ul>
-        <p style="text-align: right;"><button routerLink="/contact" mat-raised-button color="accent">Оставить заявку</button></p>
+        <p style="text-align: right;">
+            <button routerLink="/contact" mat-raised-button color="accent">
+                {{languageService.getLanguage() === 'ru' ? 'Оставить заявку' : 'Leave a request'}}
+            </button>
+        </p>
     </div>
     
     <div class="suggest-game">
         <h1>
-            Мелкие игры
+            {{languageService.getLanguage() === 'ru' ? 'Мелкие игры' : 'Mini video games'}}
         </h1>
         <p>
-            Занимаюсь разработкой мелких видео-игр.
+            {{languageService.getLanguage() === 'ru' ? 'Занимаюсь разработкой мелких видео-игр.' : 'I am engaged in the development of mini video games.'}}
         </p>
-        <p>Стек используемым технологий:</p>
+        <p>
+            {{languageService.getLanguage() === 'ru' ? 'Стек используемым технологий:' : 'Technologies used:'}}
+        </p>
         <ul>
             <li>OpenGL; Qt; QML</li>
             <li>Unity3D</li>
             <li>Unreal Engine</li>
         </ul>
-        <p style="text-align: right;"><button routerLink="/contact" mat-raised-button color="accent">Оставить заявку</button></p>
+        <p style="text-align: right;">
+            <button routerLink="/contact" mat-raised-button color="accent">
+                {{languageService.getLanguage() === 'ru' ? 'Оставить заявку' : 'Leave a request'}}
+            </button>
+        </p>
     </div>
 
 </div>
@@ -53,17 +71,23 @@
 <div class="suggest-page">
     <div class="suggest-web">
         <h1>
-            Веб приложения
+            {{languageService.getLanguage() === 'ru' ? 'Веб приложения' : 'Web application'}}
         </h1>
         <p>
-            Занимаюсь разработкой различной сложности веб-приложений.
+            {{languageService.getLanguage() === 'ru' ? 'Занимаюсь разработкой различной сложности веб-приложений.' : 'I am engaged in the development of web applications of varying complexity.'}}
         </p>
-        <p>Стек используемым технологий:</p>
+        <p>
+            {{languageService.getLanguage() === 'ru' ? 'Стек используемым технологий:' : 'Technologies used:'}}
+        </p>
         <ul>
             <li>Frontend: HTML/CSS; JavaScipt/TypeScript; jQuery; D3.js; Angular; Angular Material; Ionic</li>
             <li>Backend: Node.js; NestJS; PHP</li>
         </ul>
-        <p style="text-align: right;"><button routerLink="/contact" mat-raised-button color="accent">Оставить заявку</button></p>
+        <p style="text-align: right;">
+            <button routerLink="/contact" mat-raised-button color="accent">
+                {{languageService.getLanguage() === 'ru' ? 'Оставить заявку' : 'Leave a request'}}
+            </button>
+        </p>
     </div>
 </div>
 

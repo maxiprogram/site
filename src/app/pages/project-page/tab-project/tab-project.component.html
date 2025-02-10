@@ -1,25 +1,27 @@
 <mat-tab-group dynamicHeight="true">
-    <mat-tab label="Все проекты">
+    <mat-tab label="{{languageService.getLanguage() === 'ru' ? 'Все проекты' : 'All projects'}}">
         <ng-template matTabContent>
             <app-all-project></app-all-project>
         </ng-template>
     </mat-tab>
-    <mat-tab label="Приложения">
+    <mat-tab label="{{languageService.getLanguage() === 'ru' ? 'Приложения' : 'Applications'}}">
         <ng-template matTabContent>
             <app-software-project></app-software-project>
         </ng-template>
     </mat-tab>
-    <mat-tab label="Мобильные">
+    <mat-tab label="{{languageService.getLanguage() === 'ru' ? 'Мобильные' : 'Mobile applications'}}">
         <ng-template matTabContent>
             <app-mobile-project></app-mobile-project>
         </ng-template>
     </mat-tab>
-    <mat-tab label="Мелкие игры">
+    <mat-tab label="{{languageService.getLanguage() === 'ru' ? 'Мелкие игры' : 'Mini video games'}}">
         <ng-template matTabContent>
             <app-game-project></app-game-project>
         </ng-template>
     </mat-tab>
-    <mat-tab label="Прототипы/Демо">Тут пока пусто!</mat-tab>
+    <mat-tab label="{{languageService.getLanguage() === 'ru' ? 'Прототипы/Демо' : 'Prototype/Demo'}}">
+        {{languageService.getLanguage() === 'ru' ? 'Тут пока пусто!' : 'It\'s empty here for now!'}}
+    </mat-tab>
 </mat-tab-group>
 
 <!-- <nav mat-tab-nav-bar [tabPanel]="tabPanel">

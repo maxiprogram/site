@@ -4,33 +4,49 @@
     
     <div [formGroup]="formMailMessage" class="contact-page">
         <mat-form-field>
-            <mat-label>Ваше Имя:</mat-label>
+            <mat-label>
+                {{languageService.getLanguage() === 'ru' ? 'Ваше Имя:' : 'Your name:'}}
+            </mat-label>
             <input matInput formControlName="username">
-            <mat-error *ngIf="formMailMessage.get('username')?.status === 'INVALID'">Не должно быть пустым!</mat-error>
-        </mat-form-field>
-
-        <mat-form-field>
-            <mat-label>Тема:</mat-label>
-            <input matInput formControlName="subject">
-            <mat-error *ngIf="formMailMessage.get('subject')?.status === 'INVALID'">Не должно быть пустым!</mat-error>
-        </mat-form-field>
-
-        <mat-form-field>
-            <mat-label>Ваш Email:</mat-label>
-            <input matInput formControlName="from">
-            <mat-error *ngIf="formMailMessage.get('from')?.status === 'INVALID'">
-                {{formMailMessage.get('from')?.errors?.['required'] ? 'Не должно быть пустым!' : 'Не является Email адресом!' }}
+            <mat-error *ngIf="formMailMessage.get('username')?.status === 'INVALID'">
+                {{languageService.getLanguage() === 'ru' ? 'Не должно быть пустым!' : 'Should not be empty!'}}
             </mat-error>
         </mat-form-field>
 
         <mat-form-field>
-            <mat-label>Сообщение:</mat-label>
+            <mat-label>
+                {{languageService.getLanguage() === 'ru' ? 'Тема:' : 'Subject:'}}
+            </mat-label>
+            <input matInput formControlName="subject">
+            <mat-error *ngIf="formMailMessage.get('subject')?.status === 'INVALID'">
+                {{languageService.getLanguage() === 'ru' ? 'Не должно быть пустым!' : 'Should not be empty!'}}
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>
+                {{languageService.getLanguage() === 'ru' ? 'Ваш Email:' : 'Your Email:'}}
+            </mat-label>
+            <input matInput formControlName="from">
+            <mat-error *ngIf="formMailMessage.get('from')?.status === 'INVALID'">
+                {{formMailMessage.get('from')?.errors?.['required'] ? (languageService.getLanguage() === 'ru' ? 'Не должно быть пустым!' : 'Should not be empty!') : (languageService.getLanguage() === 'ru' ? 'Не является Email адресом!' : 'This is not an email address!') }}
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>
+                {{languageService.getLanguage() === 'ru' ? 'Сообщение:' : 'Message:'}}
+            </mat-label>
             <textarea matInput cols="40" rows="10" formControlName="textMessage"></textarea>
-            <mat-error *ngIf="formMailMessage.get('textMessage')?.status === 'INVALID'">Не должно быть пустым!</mat-error>
+            <mat-error *ngIf="formMailMessage.get('textMessage')?.status === 'INVALID'">
+                {{languageService.getLanguage() === 'ru' ? 'Не должно быть пустым!' : 'Should not be empty!'}}
+            </mat-error>
         </mat-form-field>
 
         <input id="id-response-token" type="hidden" formControlName="responseToken" (customchange)="onSustomChange($event)" (customreset)="onSustomReset($event)">
-        <mat-error *ngIf="formMailMessage.get('responseToken')?.status === 'INVALID'">Пройдите проверку!</mat-error>
+        <mat-error *ngIf="formMailMessage.get('responseToken')?.status === 'INVALID'">
+            {{languageService.getLanguage() === 'ru' ? 'Пройдите проверку!' : 'Take the test!'}}
+        </mat-error>
 
         <div class="g-recaptcha" data-sitekey="6LeNyREnAAAAADW1wL2uBRgxXojuKjTqi2ywWaSR" data-callback="callBackRecaptcha" data-expired-callback="callBackResetRecaptcha"></div>    
 
@@ -38,11 +54,17 @@
 
     <p></p>
 
-    <button style="float: right;" [disabled]="!formMailMessage.valid" mat-raised-button color="accent" (click)="sendMail()">Отправить</button>
+    <button style="float: right;" [disabled]="!formMailMessage.valid" mat-raised-button color="accent" (click)="sendMail()">
+        {{languageService.getLanguage() === 'ru' ? 'Отправить' : 'Send'}}
+    </button>
 
 </div>
 
 <div *ngIf="!isViewForm" style="text-align: center;">
-    <h1 class="accent-text">Письмо успешно отправлено!</h1>
-    <h1>Спасибо за обратную связь!</h1>
+    <h1 class="accent-text">
+        {{languageService.getLanguage() === 'ru' ? 'Письмо успешно отправлено!' : 'Letter sent successfully!'}}
+    </h1>
+    <h1>
+        {{languageService.getLanguage() === 'ru' ? 'Спасибо за обратную связь!' : 'Thanks for your feedback!'}}
+    </h1>
 </div>

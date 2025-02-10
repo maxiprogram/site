@@ -14,32 +14,32 @@
 
     <span style="flex: 1 1 auto;"></span>    
 
-    <button mat-button matTooltip="Выбор языка" [matMenuTriggerFor]="menuLanguage">
+    <button mat-button matTooltip="{{languageService.getLanguage() === 'ru' ? 'Выбор языка' : 'Language selection'}}" [matMenuTriggerFor]="menuLanguage">
       Language
       <mat-icon>language</mat-icon>
     </button>
     <mat-menu #menuLanguage>
-      <button mat-menu-item>
-        <mat-icon>radio_button_checked</mat-icon>
+      <button mat-menu-item (click)="changeLanguage('ru')">
+        <mat-icon>{{languageService.getLanguage() === 'ru' ? 'radio_button_checked' : 'radio_button_unchecked'}}</mat-icon>
         Русский
       </button>
-      <!-- <button mat-menu-item>
-        <mat-icon>radio_button_unchecked</mat-icon>
+      <button mat-menu-item (click)="changeLanguage('en')">
+        <mat-icon>{{languageService.getLanguage() === 'en' ? 'radio_button_checked' : 'radio_button_unchecked'}}</mat-icon>
         English
-      </button> -->
+      </button>
     </mat-menu>
 
-    <button mat-icon-button matTooltip="Выбор темы" [matMenuTriggerFor]="menuTheme">
+    <button mat-icon-button matTooltip="{{languageService.getLanguage() === 'ru' ? 'Выбор темы' : 'Theme selection'}}" [matMenuTriggerFor]="menuTheme">
       <mat-icon>format_color_fill</mat-icon>
     </button>
     <mat-menu #menuTheme>
       <button mat-menu-item (click)="changeTheme('dark')">
         <mat-icon>{{themeName === 'dark' ? 'radio_button_checked' : 'radio_button_unchecked'}}</mat-icon>
-        <span>Тёмная</span>
+        <span>{{languageService.getLanguage() === 'ru' ? 'Тёмная' : 'Dark'}}</span>
       </button>
       <button mat-menu-item (click)="changeTheme('light')">
         <mat-icon>{{themeName === 'light' ? 'radio_button_checked' : 'radio_button_unchecked'}}</mat-icon>
-        <span>Светлая</span>
+        <span>{{languageService.getLanguage() === 'ru' ? 'Светлая' : 'Light'}}</span>
       </button>
     </mat-menu>
 
@@ -47,12 +47,19 @@
 
   <mat-toolbar-row class="menu-row">
 
-    <mat-nav-list class="menu-container">
+    <mat-nav-list class="menu-container" [ngSwitch]="languageService.getLanguage()">
+        <!-- RU -->
         <!-- <a mat-list-item routerLink="/about" routerLinkActive="mdc-list-item--activated">Обо мне</a> -->
-        <a mat-list-item routerLink="/suggestion" routerLinkActive="mdc-list-item--activated">Навыки</a>
-        <a mat-list-item routerLink="/project" routerLinkActive="mdc-list-item--activated">Проекты</a>
-        <a mat-list-item routerLink="/contact" routerLinkActive="mdc-list-item--activated">Контакты</a>
-        <a mat-list-item routerLink="/donate" routerLinkActive="mdc-list-item--activated">Помощь сайту</a>
+        <a mat-list-item routerLink="/suggestion" routerLinkActive="mdc-list-item--activated" *ngSwitchCase="'ru'">Навыки</a>
+        <a mat-list-item routerLink="/project" routerLinkActive="mdc-list-item--activated" *ngSwitchCase="'ru'">Проекты</a>
+        <a mat-list-item routerLink="/contact" routerLinkActive="mdc-list-item--activated" *ngSwitchCase="'ru'">Контакты</a>
+        <a mat-list-item routerLink="/donate" routerLinkActive="mdc-list-item--activated" *ngSwitchCase="'ru'">Помощь сайту</a>
+
+        <!-- EN -->
+        <a mat-list-item routerLink="/suggestion" routerLinkActive="mdc-list-item--activated" *ngSwitchCase="'en'">Skills</a>
+        <a mat-list-item routerLink="/project" routerLinkActive="mdc-list-item--activated" *ngSwitchCase="'en'">Projects</a>
+        <a mat-list-item routerLink="/contact" routerLinkActive="mdc-list-item--activated" *ngSwitchCase="'en'">Contacts</a>
+        <a mat-list-item routerLink="/donate" routerLinkActive="mdc-list-item--activated" *ngSwitchCase="'en'">Donate</a>
       </mat-nav-list>
 
     <!-- <div class="menu-container">

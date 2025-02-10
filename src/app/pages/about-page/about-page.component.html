@@ -1,13 +1,21 @@
 <div class="center">
     
-    <h1>Здравствуйте! Меня зовут Максим</h1>
+    <h1>
+        {{languageService.getLanguage() === 'ru' ? 'Здравствуйте! Меня зовут Максим' : 'Hello! My name is Maxim'}}
+    </h1>
     
     <p></p>
     <p></p>
 
-    <h3>Добро пожаловать на мой сайт-портфолио!</h3>
+    <h3>
+        {{languageService.getLanguage() === 'ru' ? 'Добро пожаловать на мой сайт-портфолио!' : 'Welcome to my portfolio site!'}}
+    </h3>
 
-    <h3>Занимаюсь разработкой программного обеспечения прикладного и системного уровня, мобильных приложений, веб приложений и мелких игр</h3>
+    <h3>
+        {{languageService.getLanguage() === 'ru' ? 'Занимаюсь разработкой программного обеспечения прикладного и системного уровня, мобильных приложений, веб приложений и мелких игр' : 'I am engaged in the development of software at the application and system level, mobile applications, web applications and mini video games'}}
+    </h3>
 
-    <h3>Ознакомиться с моими работами можно <a href="/project">тут</a></h3>
+    <h3>
+        {{languageService.getLanguage() === 'ru' ? 'Ознакомиться с моими работами можно ' : 'You can see my works here '}}<a href="/project">{{languageService.getLanguage() === 'ru' ? 'тут' : 'here'}}</a>
+    </h3>
 </div>

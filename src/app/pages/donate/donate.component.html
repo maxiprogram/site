@@ -23,7 +23,8 @@
  </p> -->
 
  <p style="text-align: center;">
-    Пожертвование PayPal:<br><br>
+    {{languageService.getLanguage() === 'ru' ? 'Пожертвование PayPal:' : 'Donate PayPal:'}}
+    <br><br>
     <a href="https://www.paypal.com/donate/?hosted_button_id=AR2LSMUJS3F92" target="_blank">
         <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate,Button">
     </a>
@@ -33,6 +34,7 @@
  <br><br>
 
  <p style="text-align: center;" >
-    Пожертвование по QR-коду PayPal:<br><br>
+    {{languageService.getLanguage() === 'ru' ? 'Пожертвование по QR-коду PayPal:' : 'Donate by QR-code PayPal:'}}
+    <br><br>
     <img src="assets/QR_Code_PayPal.png"/>
  </p>

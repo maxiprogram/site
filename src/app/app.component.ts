@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { LanguageService } from './services/language.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild('mainContent') mainContent!: ElementRef;
   @ViewChild('header') header!: any;
 
-  constructor() {
+  constructor(public languageService: LanguageService) {
   }
 
   ngOnInit(): void {

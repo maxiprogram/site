@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { SendMailService } from '../../services/send-mail.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-contact-page',
@@ -12,7 +13,10 @@ export class ContactPageComponent implements AfterViewInit {
   formMailMessage: FormGroup;
   isViewForm: boolean;
 
-  constructor(private sendMailService: SendMailService) {
+  constructor(
+    private sendMailService: SendMailService,
+    public languageService: LanguageService
+  ) {
     this.formMailMessage = new FormGroup({
       username: new FormControl('',[Validators.required]),
       subject: new FormControl('',[Validators.required]),
