@@ -67,6 +67,10 @@ const routes: Routes = [
     loadChildren: () => import('./project-page/post-page/ai-art/ai-art.module').then((m) => m.AiArtModule)
   },
   {
+    path: 'project/leap-bird',
+    loadChildren: () => import('./project-page/post-page/leap-bird/leap-bird.module').then((m) => m.LeapBirdModule)
+  },
+  {
     path: 'project',
     loadChildren: () => import('./project-page/project-page.module').then((m) => m.ProjectPagetModule)
   },

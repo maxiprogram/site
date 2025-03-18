@@ -20,7 +20,7 @@
         </ng-template>
     </mat-tab>
     <mat-tab label="{{languageService.getLanguage() === 'ru' ? 'Прототипы/Демо' : 'Prototype/Demo'}}">
-        {{languageService.getLanguage() === 'ru' ? 'Тут пока пусто!' : 'It\'s empty here for now!'}}
+        <app-demo-project></app-demo-project>
     </mat-tab>
 </mat-tab-group>
 

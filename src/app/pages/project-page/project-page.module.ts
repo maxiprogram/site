@@ -11,6 +11,7 @@ import { AllProjectComponent } from './component/all-project/all-project.compone
 import { MobileProjectComponent } from './component/mobile-project/mobile-project.component';
 import { GameProjectComponent } from './component/game-project/game-project.component';
 import { SoftwareProjectComponent } from './component/software-project/software-project.component';
+import { DemoProjectComponent } from './component/demo-project/demo-project.component';
 
 
 
@@ -21,6 +22,7 @@ import { SoftwareProjectComponent } from './component/software-project/software-
     MobileProjectComponent,
     GameProjectComponent,
     SoftwareProjectComponent,
+    DemoProjectComponent,
   ],
   imports: [
     CommonModule,

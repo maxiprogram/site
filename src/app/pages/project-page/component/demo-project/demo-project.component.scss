@@ -1,0 +1,25 @@
+.wrap-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-project {
+    max-width: 400px;
+    margin: 8px;
+}
+
+@media (max-width: 540px) {
+    .card-project {
+        max-width: 100%;
+        margin: 8px;
+    }
+}
+
+mat-card-content p {
+    margin-top: 16px;
+}
+
+.avatar {
+    text-align: center;
+}
