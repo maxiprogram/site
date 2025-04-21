@@ -1,0 +1,77 @@
+<div style="width: 100%;">
+    <h1 style="text-align: center;">Волшебный колодец event</h1>
+
+    <div style="width: 100%;">
+        <ng-image-slider
+        [images]="imageObject"
+        [imageSize]="{width: '400px', height: '300px', space: 5}"
+        [lazyLoading]="true"></ng-image-slider>
+    </div>
+
+    <p></p>
+
+    <mat-card>
+        <mat-card-header>
+            <!-- <div mat-card-avatar class="avatar">
+                <mat-icon>videogame_asset</mat-icon>
+            </div> -->
+            <mat-card-title>Описание проекта</mat-card-title>
+            <!-- <mat-card-subtitle>Мелкие игры</mat-card-subtitle> -->
+        </mat-card-header>
+        <mat-card-content>
+            <p>Волшебный колодец event интерактивное приложение</p>
+            <p>Распознание и идентификация лица в реальном времени</p>
+            <p>Система анализирует присутствие человека, сопровождая каждый этап звуковыми эффектами и фоновой музыкой, и выдает предсказания или сообщения в зависимости от условий:</p>
+            <ul>
+                <li>
+                    <p><strong>Ожидание(нет лиц в зоне камеры)</strong></p>
+                    <p>Воспроизводится видеозаставка ожидания, фоновая музыка</p>
+                    <p>Отображаемый текст: "Хотите узнать будущее? Загляните внутрь. Смотрите глубже! Я должен почувствовать ваше сердце и услышать голос души..."</p>
+                </li>
+                <li>
+                    <p><strong>Обнаружение нового лица(или повторное лицо, спустя 1-час)</strong></p>
+                    <p>Запускается анимация с сообщением: "Волшебный колодец готовит для вас предсказание..."
+                    <p>После небольшой паузы выводится случайное предсказание, в сопровождении со звуковым эффектом</p>
+                </li>
+                <li>
+                    <p><strong>Если человек остается в зоне камеры после получения предсказания</strong></p>
+                    <p>Отображаемый текст: "Освободите колодец для других! Ваше предсказание уже дано", в сопровождении со звуковым эффектом</p>
+                    <p>Если человек уходит – система возвращается в режим ожидания.</p>
+                </li>
+                <li>
+                    <p><strong>Обнаружение множества лиц</strong></p>
+                    <p>Отображаемый текст: "Я раскрою судьбу, но только на едине, прошу остальных гостей сделать шаг назад", в сопровождении со звуковым эффектом</p>
+                </li>
+            </ul>
+        </mat-card-content>
+        <!-- <mat-card-actions align="end">
+            <button mat-button color="accent">ПОДРОБНЕЕ</button>
+        </mat-card-actions> -->
+    </mat-card>
+
+    <p></p>
+
+    <mat-card>
+        <mat-card-header>
+            <!-- <div mat-card-avatar class="avatar">
+                <mat-icon>videogame_asset</mat-icon>
+            </div> -->
+            <mat-card-title>Используемые технологии и языки программирования</mat-card-title>
+            <!-- <mat-card-subtitle>Мелкие игры</mat-card-subtitle> -->
+        </mat-card-header>
+        <mat-card-content>
+            <ul>
+                <li>Qt Framework</li>
+                <li>Qml/JavaScript</li>
+                <li>C/C++</li>
+                <li>Tcp/Ip Socket</li>
+                <li>Python</li>
+                <li>OpenCV, face_recognition</li>
+            </ul>
+        </mat-card-content>
+        <!-- <mat-card-actions align="end">
+            <button mat-button color="accent">ПОДРОБНЕЕ</button>
+        </mat-card-actions> -->
+    </mat-card>
+
+</div>

@@ -71,6 +71,14 @@ const routes: Routes = [
     loadChildren: () => import('./project-page/post-page/leap-bird/leap-bird.module').then((m) => m.LeapBirdModule)
   },
   {
+    path: 'project/face-well',
+    loadChildren: () => import('./project-page/post-page/face-well/face-well.module').then((m) => m.FaceWellModule)
+  },
+  {
+    path: 'project/face-mirror',
+    loadChildren: () => import('./project-page/post-page/face-mirror/face-mirror.module').then((m) => m.FaceMirrorModule)
+  },
+  {
     path: 'project',
     loadChildren: () => import('./project-page/project-page.module').then((m) => m.ProjectPagetModule)
   },
