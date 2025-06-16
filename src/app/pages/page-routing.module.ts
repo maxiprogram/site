@@ -79,6 +79,10 @@ const routes: Routes = [
     loadChildren: () => import('./project-page/post-page/face-mirror/face-mirror.module').then((m) => m.FaceMirrorModule)
   },
   {
+    path: 'project/match-three',
+    loadChildren: () => import('./project-page/post-page/match-three/match-three.module').then((m) => m.MatchThreeModule)
+  },
+  {
     path: 'project',
     loadChildren: () => import('./project-page/project-page.module').then((m) => m.ProjectPagetModule)
   },
